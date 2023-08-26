@@ -117,43 +117,84 @@ public class MethodDeposu {
 
         }
     }
+
+    public static Map<Integer, String> yilSonuSinifArttir(Map<Integer, String> ogrenciMap) {
+
+        Set<Integer>ogrenciKeySeti =ogrenciMap.keySet();
+
+        //for each loop ile her bir key'e ait value'yu çağırıp istediğimiz update'i yapalım.
+        for (Integer eachKey:ogrenciKeySeti
+             ) {
+
+            //1-Bilgiye ulaşmak için yaptığımız gibi adım adım value'yü array'e çevirmeliyiz.
+            //    - Key ile value'yu çağırırız.
+            String eachValue=ogrenciMap.get(eachKey);
+
+           //- Value'yu Array'e çeviririz.
+            String []valueArr=eachValue.split("-");
+
+           //- Array'de istediğimiz update'i yaparız.
+            switch (valueArr[2]){
+                case "9":
+                    valueArr[2]="10";
+                    break;
+                case "10":
+                    valueArr[2]="11";
+                    break;
+                case "11":
+                    valueArr[2]="12";
+                    break;
+                case "12":
+                    valueArr[2]="Mezun";
+                    break;
+            }//[Ali, Can, 12, H, MF]
+
+           //2- Bilgiye ulaşmak için parçaladığımız value'yu yeni hali ile tekrar birleştiririz.
+            String yeniValue=valueArr[0]+"-"+valueArr[1]+"-"+valueArr[2]+"-"+valueArr[3]+"-"+valueArr[4];
+            // "Ali, Can, 12, H, MF"
+
+           //3- Key ve yeni value'yu kullanarak map'i update ederiz.
+            ogrenciMap.put(eachKey,yeniValue);
+
+
+        }
+        return ogrenciMap;
+    }
+
+    public static Map<Integer, String> ogrenciBolumDegistir(Map<Integer, String> ogrenciMap, String eskiBolum, String yeniBolum) {
+
+        //update için key ve value'nun ikisini de ihtiyacımız var.
+
+        Set<Integer> ogrenciKeySeti=ogrenciMap.keySet(); //[101, 102, 103, 104, 105, 106]
+
+        // Her bir key'e ait value'yu çağırıp update edip yeni hali ile map'e ekleyelim.
+
+        for (Integer eachKey:ogrenciKeySeti //101
+             ) {
+
+            String eachValue=ogrenciMap.get(eachKey); //"Ali, Can, 12, H, MF"
+            String [] valueArr=eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // artık array'de update yapabiliriz.
+
+            if (valueArr[4].equalsIgnoreCase(eskiBolum)){
+                valueArr[4]=yeniBolum;
+            }
+
+            // update edilen array'i mape value olarak koymak için birleştirelim.
+
+            String yeniValue=valueArr[0]+"-"+valueArr[1]+"-"+valueArr[2]+"-"+valueArr[3]+"-"+valueArr[4];
+
+            // key var, value'nun update hali de var. mapi update edelim.
+            ogrenciMap.put(eachKey,yeniValue);
+
+
+        }
+
+        return ogrenciMap;
+
+    }
 }
 
 
-    /*
 
-
-    Elimizde map var.
-    {
-    101=Ali-Can-11-H-MF,
-    102=Veli-Cem-10-K-TM,
-    103=Ali-Cem-11-K-TM,
-    104=Ayse-Can-10-H-MF,
-    105=Sevgi-Cem-11-M-TM,
-    106=Sevgi-Can-10-K-MF
-    }
-
-    1-Bizden istenen bilgiler key'de mi yoksa value'da mı?
-
-    collections oluşturduk.
-    [
-    Ali-Can-11-H-MF,
-    Veli-Cem-10-K-TM,
-    Ali-Cem-11-K-TM,
-    Ayse-Can-10-H-MF,
-    Sevgi-Cem-11-M-TM,
-    Sevgi-Can-10-K-MF
-    ]
-
-    2- Value içerisindeki bilgilere rahat ulaşabilmek için for each loop ile
-    her bir value'yi alıp split ile array'e çevirelim.
-
-    [Ali-Can-11-H-MF]
-
-    3- Eğer sınıf ve şube parametre olarak verilen ile aynıysa isim ve soy ismi yazdır.
-
-
-
-
-
-     */

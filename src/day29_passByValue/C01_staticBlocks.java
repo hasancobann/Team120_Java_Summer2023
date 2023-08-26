@@ -24,7 +24,7 @@ public class C01_staticBlocks {
         System.out.println("static blok 2 calisti");
     }
 
-    {
+    static {
         System.out.println("static olmayan blok calisti");
         // obje olusturuldugunda calisir
     }
