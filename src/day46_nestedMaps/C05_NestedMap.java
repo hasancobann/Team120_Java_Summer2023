@@ -1,5 +1,6 @@
 package day46_nestedMaps;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,6 +62,8 @@ public class C05_NestedMap {
 
         // totalprice yazdırın
         System.out.println(bookingMap.get("totalprice")); // 500
+
+        System.out.println(bookingMap.get("totalprice"));
 
     }
 }

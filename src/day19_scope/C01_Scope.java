@@ -74,6 +74,8 @@ public class C01_Scope {
                     static olmayan(instance) variable'lari kabul eder
 
 
+
+
      */
 
 }
