@@ -22,12 +22,12 @@ public class C01_Pazarlama {
         ve degerini o class'lara döndürür
      */
 
-    public int getToplamSatis() {
+    public int getToplamSatis() { // code-generate-getter ile oluşturduk
 
-        return toplamSatis;
+        return toplamSatis; // return nereden çağırıldıysa oraya döndürür
     }
 
-    public void setSatis(int satis) {
+    public void setSatis(int satis) {  // // code-generate-setter ile oluşturduk
         this.satis = satis;
         toplamSatisaEkle();
     }

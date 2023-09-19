@@ -2,9 +2,6 @@ package day35_inheritance;
 
 public class Araba {
 
-
-
-
     Araba(){
         System.out.println("Araba parametresiz constructor calisti");
 

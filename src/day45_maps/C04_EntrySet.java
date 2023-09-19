@@ -26,7 +26,7 @@ public class C04_EntrySet {
         Update etmek için
         Önce keySet oluşturuyoruz.
         keySet'deki her bir key için value'yu getiriyoruz.
-        value üzerinde istediğimiz updatw'i yapıp,
+        value üzerinde istediğimiz update'i yapıp,
         key ile yeniValue'yu map'e ekleyerek map'i update ediyoruz.
 
         Java'da key=value ikilisi beraberce barındıran ENTRY diye bir yapı da var.

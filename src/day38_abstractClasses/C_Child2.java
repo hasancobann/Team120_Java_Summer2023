@@ -1,7 +1,5 @@
 package day38_abstractClasses;
 
-import day37_overridin_pollymorphisim.C_MecburiOlmayanParent;
-
 public class C_Child2 extends A_KuralciParent {
 
 

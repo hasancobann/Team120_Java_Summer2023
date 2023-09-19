@@ -8,8 +8,8 @@ public class C02_StringBuilderMethodlari {
 
         System.out.println(sb1.reverse()); // royisellezug ad ahad avaJ
 
-        System.out.println(sb1); // royisellezug ad ahad avaJ
-        sb1.reverse();
+        System.out.println(sb1); // royisellezug ad ahad avaJ ==> bu değişikliği kalıcı olarak yapar.
+        sb1.reverse(); // eski haline çevirmek için tekrar reverse yaptık
 
         System.out.println(sb1); // Java daha da guzellesiyor
 

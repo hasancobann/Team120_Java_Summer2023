@@ -1,6 +1,6 @@
 package day39_interfaces;
 
-import day37_overridin_pollymorphisim.AParent;
+import day37_overriding_pollymorphisim.AParent;
 
 public class C01_ChildOf2Interfaces extends AParent implements I01_Interfaces,I02_Interfaces{
 

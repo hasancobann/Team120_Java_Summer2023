@@ -1,4 +1,4 @@
-package day37_overridin_pollymorphisim;
+package day37_overriding_pollymorphisim;
 
 public class C_MecburiOlmayanParent {
 

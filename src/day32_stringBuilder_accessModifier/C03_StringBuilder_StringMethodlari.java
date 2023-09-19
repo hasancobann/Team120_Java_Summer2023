@@ -15,7 +15,7 @@ public class C03_StringBuilder_StringMethodlari {
 
         System.out.println(sb1); // Java Candir
 
-        System.out.println(sb1.substring(0, 4)); // Java
+        System.out.println(sb1.substring(0, 4)); // Java ==> String methodları substring'de kalıcı değişiklik yapmaz.
 
         System.out.println(sb1); // Java Candir
 

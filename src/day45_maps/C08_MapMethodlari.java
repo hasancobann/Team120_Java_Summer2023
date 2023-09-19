@@ -31,7 +31,7 @@ public class C08_MapMethodlari {
         harfler.compute("L",(a,b)->3*b+5);
         System.out.println(harfler); //{A=15, T=10, Z=70, K=25, L=35}
 
-        // map'de "M" yoksa değeri 50 olarak map' ekleyin.
+        // map'de "M" yoksa değeri 50 olarak map'e ekleyin.
         //harfler.putIfAbsent("M",50);
         harfler.computeIfAbsent("M",v->50);
         System.out.println(harfler); // {A=15, T=10, Z=70, K=25, L=35, M=50}
